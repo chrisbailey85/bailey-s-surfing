@@ -1,0 +1,227 @@
+@import './hamburgers/hamburgers';
+
+$white: #fafafa;
+$border-radius: 15px;
+$accent_green: #008289;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+// shared styles
+img,
+.map {
+  max-width: 100%;
+}
+.heading {
+  font-family: 'Kalam', cursive;
+}
+.paragraph {
+  font-family: 'Prompt', sans-serif;
+}
+.heading--xxl {
+  font-size: 3rem;
+}
+.heading--l {
+  font-size: 2rem;
+}
+.container {
+  width: min(100% - 1rem, 64rem);
+  margin-inline: auto;
+}
+// nav bar
+.logo {
+  width: 162px;
+  height: 28px;
+  background-image: url('../assets/logo.svg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-repeat: none;
+  background-position: center;
+}
+.header {
+  position: relative;
+  padding: 0.5rem 0;
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+.nav__list {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 1rem;
+}
+.nav {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(
+      0deg,
+      rgba(0, 130, 137, 0.5),
+      rgba(0, 130, 137, 0.7)
+    ),
+    url('../assets/nav_background.jpg');
+  background-size: cover;
+  z-index: 1000;
+  transform: scale(0, 1);
+  transform-origin: right;
+  transition: transform 0.5s ease-in-out;
+  &__link {
+    position: relative;
+    text-decoration: none;
+    text-align: left;
+    color: $white;
+    font-family: 'Kalam', cursive;
+    text-transform: capitalize;
+    font-size: 1.5rem;
+    width: min-content;
+    &.active::before {
+      content: '';
+      width: 100%;
+      height: 2px;
+      background-color: $white;
+      position: absolute;
+      bottom: 5px;
+      left: 0;
+    }
+  }
+  &.open {
+    transform: scale(1, 1);
+  }
+}
+// banner
+.banner {
+  position: relative;
+  height: 50vh;
+  overflow: hidden;
+  .heading {
+    text-transform: uppercase;
+  }
+  .paragraph {
+    font-size: 1.2rem;
+    color: #fff;
+  }
+}
+
+.banner__video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.banner__text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 3;
+  text-align: center;
+  width: 100%;
+  height: 100%;
+  color: #fff;
+  background-color: rgba(28, 43, 61);
+  mix-blend-mode: multiply;
+}
+
+section:not(.banner) {
+  margin-top: 5rem;
+}
+
+.about__imgs {
+  margin-top: 5rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 150px 150px;
+  gap: 1rem;
+  img {
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+    border-radius: $border-radius;
+    &:last-child {
+      grid-column: 1 / -1;
+    }
+  }
+}
+
+// testimonials
+
+.slider {
+  position: relative;
+  width: 100%;
+  height: 285px;
+  display: grid;
+  grid-template-columns: 35px 1fr 35px;
+  grid-template-rows: 50% 50%;
+  background: linear-gradient(
+      0deg,
+      rgba(28, 43, 61, 0.5),
+      rgba(28, 43, 61, 0.5)
+    ),
+    url('../assets/surfer-4234061_1920.jpg');
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+  border-radius: $border-radius;
+  overflow: hidden;
+  &__controls__prev,
+  &__controls__next {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(28, 43, 61, 0.2);
+  }
+  &__controls__prev {
+    grid-column: 1/2;
+    grid-row: 1/-1;
+  }
+  &__controls__next {
+    grid-column: 3/-1;
+    grid-row: 1/-1;
+  }
+  &__text {
+    grid-row: 1/-1;
+    place-self: end;
+    padding: 1rem;
+    font-family: 'Prompt', sans-serif;
+    text-align: center;
+  }
+  &__name {
+    font-weight: 400;
+  }
+  &__controls__dots {
+    margin-top: 1.25rem;
+    display: flex;
+    justify-content: center;
+    .dot {
+      width: 25px;
+      height: 25px;
+      border-radius: 50%;
+      border: 1px solid $accent_green;
+      margin-left: 1rem;
+
+      &.active {
+        background-color: $accent_green;
+      }
+    }
+  }
+}
