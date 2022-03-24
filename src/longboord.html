@@ -7,7 +7,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Kalam:wght@700&family=Prompt:wght@400;600&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Kalam:wght@700&family=Prompt:wght@400;500;600&display=swap"
       rel="stylesheet"
     />
     <link
@@ -18,7 +18,6 @@
       referrerpolicy="no-referrer"
     />
     <link rel="stylesheet" href="css/style.css" />
-    <link rel="stylesheet" href="css/hamburgers/hamburgers.css" />
     <title>Bailey's Surf - Longboard Hire</title>
   </head>
   <body>
@@ -45,14 +44,14 @@
               </li>
               <li class="nav__item">
                 <a href="#" class="nav__link dropdown">Services</a>
-                <div class="dropdown__menu">
+                <ul class="dropdown__menu">
                   <li class="nav__item">
                     <a href="./longboord.html" class="nav__link active"
                       >longboard hire</a
                     >
                   </li>
                   <li class="nav__item">
-                    <a href="./shortboord.html" class="nav__link"
+                    <a href="./shortborad.html" class="nav__link"
                       >shortboord hire</a
                     >
                   </li>
@@ -64,7 +63,7 @@
                   <li class="nav__item">
                     <a href="./lessons.html" class="nav__link">lessions</a>
                   </li>
-                </div>
+                </ul>
               </li>
               <li class="nav__item">
                 <a href="./contact.html" class="nav__link">Contact</a>
@@ -85,10 +84,10 @@
         ></video>
         <div class="banner__text">
           <h1 class="heading heading--xxl">Bailey's Surf</h1>
-          <h2 class="heading banner__sub__heading">Longboard Hire</h2>
         </div>
+        <p class="heading banner--heading">longboard hire</p>
       </section>
-      <section class="pricing">
+      <section class="pricing container">
         <h2 class="heading heading--l">Pricing</h2>
         <table class="table">
           <tr>
@@ -110,105 +109,114 @@
         </table>
       </section>
 
-      <section class="faq section--padding">
-        <ul class="faq__list">
-          <li>
-            <button
-              class="faq__btn"
-              aria-expanded="false"
-              aria-controls="question-one
-            "
-            >
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit.<i
-                class="fa-solid fa-chevron-down"
-              ></i>
-            </button>
-            <p class="paragraph faq__paragraph" id="question-one">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Egestas
-              tellus dictumst eget rutrum maecenas habitant senectus. Facilisis
-              vestibulum.
-            </p>
-          </li>
-          <li>
-            <button
-              class="faq__btn"
-              aria-expanded="false"
-              aria-controls="question-two
-            "
-            >
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit.<i
-                class="fa-solid fa-chevron-down"
-              ></i>
-            </button>
-            <p class="paragraph faq__paragraph" id="question-two">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Egestas
-              tellus dictumst eget rutrum maecenas habitant senectus. Facilisis
-              vestibulum.
-            </p>
-          </li>
-          <li>
-            <button
-              class="faq__btn"
-              aria-expanded="false"
-              aria-controls="question-three
-            "
-            >
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit.<i
-                class="fa-solid fa-chevron-down"
-              ></i>
-            </button>
-            <p class="paragraph faq__paragraph" id="question-three">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Egestas
-              tellus dictumst eget rutrum maecenas habitant senectus. Facilisis
-              vestibulum.
-            </p>
-          </li>
-          <li>
-            <button
-              class="faq__btn"
-              aria-expanded="false"
-              aria-controls="question-four
-            "
-            >
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit.<i
-                class="fa-solid fa-chevron-down"
-              ></i>
-            </button>
-            <p class="paragraph faq__paragraph" id="question-four">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Egestas
-              tellus dictumst eget rutrum maecenas habitant senectus. Facilisis
-              vestibulum.
-            </p>
-          </li>
-        </ul>
-        <lottie-player
-          class="lottie"
-          src="./assets/lf30_editor_bygesmxx.json"
-          background="transparent"
-          speed="1"
-          loop
-          autoplay
-        ></lottie-player>
+      <section class="faq container">
+        <h2 class="heading faq--heading heading--l">Faq</h2>
+        <div class="faq__content">
+          <ul class="faq__list">
+            <li>
+              <button
+                class="faq__btn"
+                aria-expanded="false"
+                aria-controls="question-one
+              "
+              >
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.<i
+                  class="fa-solid fa-chevron-down"
+                ></i>
+              </button>
+              <p class="paragraph faq__paragraph" id="question-one">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Egestas
+                tellus dictumst eget rutrum maecenas habitant senectus.
+                Facilisis vestibulum.
+              </p>
+            </li>
+            <li>
+              <button
+                class="faq__btn"
+                aria-expanded="false"
+                aria-controls="question-two
+              "
+              >
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.<i
+                  class="fa-solid fa-chevron-down"
+                ></i>
+              </button>
+              <p class="paragraph faq__paragraph" id="question-two">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Egestas
+                tellus dictumst eget rutrum maecenas habitant senectus.
+                Facilisis vestibulum.
+              </p>
+            </li>
+            <li>
+              <button
+                class="faq__btn"
+                aria-expanded="false"
+                aria-controls="question-three
+              "
+              >
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.<i
+                  class="fa-solid fa-chevron-down"
+                ></i>
+              </button>
+              <p class="paragraph faq__paragraph" id="question-three">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Egestas
+                tellus dictumst eget rutrum maecenas habitant senectus.
+                Facilisis vestibulum.
+              </p>
+            </li>
+            <li>
+              <button
+                class="faq__btn"
+                aria-expanded="false"
+                aria-controls="question-four
+              "
+              >
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.<i
+                  class="fa-solid fa-chevron-down"
+                ></i>
+              </button>
+              <p class="paragraph faq__paragraph" id="question-four">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Egestas
+                tellus dictumst eget rutrum maecenas habitant senectus.
+                Facilisis vestibulum.
+              </p>
+            </li>
+          </ul>
+          <lottie-player
+            class="lottie"
+            src="./assets/lf30_editor_bygesmxx.json"
+            background="transparent"
+            speed="1"
+            loop
+            autoplay
+          ></lottie-player>
+        </div>
       </section>
 
-      <section class="testimonials section-padding">
+      <section class="testimonials container">
         <div class="slider">
-          <div class="slider__controls__prev"></div>
-          <div class="slider__controls__next"></div>
-          <h2 class="slide__name">Wade Warren</h2>
-          <p class="paragraph">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed lectus
-            dolor elit eu porta.
-          </p>
+          <div class="slider__controls__prev">
+            <i class="fa-solid fa-chevron-left"></i>
+          </div>
+          <div class="slider__controls__next">
+            <i class="fa-solid fa-chevron-right"></i>
+          </div>
+          <div class="slider__text">
+            <h2 class="slider__name">Wade Warren</h2>
+            <p class="paragraph">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
+              lectus dolor elit eu porta.
+            </p>
+          </div>
         </div>
         <div class="slider__controls__dots">
-          <div class="dot"></div>
+          <div class="dot active"></div>
           <div class="dot"></div>
           <div class="dot"></div>
           <div class="dot"></div>
         </div>
       </section>
-      <section class="services section--padding">
+      <section class="services container">
         <div class="cards">
           <div class="card shortboard">
             <h2 class="heading card--heading">Shortboard hire</h2>
@@ -225,95 +233,109 @@
         </div>
       </section>
 
-      <section class="contact">
+      <section class="contact container">
         <h2 class="heading heading--l">Contact us</h2>
-        <form action="#">
-          <label for="name" class="contact__label">name</label>
-          <input type="text" name="name" />
-          <label for="email" class="contact__label">email</label>
-          <input type="email" name="email" />
-          <label for="message" class="contact__label">message</label>
-          <textarea
-            name="message"
-            class="contact__message"
-            cols="30"
-            rows="10"
-          ></textarea>
+        <form class="form" action="#">
+          <div class="form__group">
+            <label for="name" class="contact__label">name</label>
+            <input type="text" name="name" />
+          </div>
+          <div class="form__group">
+            <label for="email" class="contact__label">email</label>
+            <input type="email" name="email" />
+          </div>
+          <div class="form__group">
+            <label for="message" class="contact__label">message</label>
+            <textarea
+              name="message"
+              class="contact__message"
+              cols="30"
+              rows="10"
+            ></textarea>
+          </div>
+          <button class="btn">Send</button>
         </form>
       </section>
     </main>
     <footer class="footer">
-      <div class="footer__logo"></div>
-      <div aria-label="secondary navigation" class="nav">
-        <ul class="footer__list">
-          <li class="footer__item">
-            <a href="#" class="footer__link">Home</a>
-          </li>
-          <li class="footer__item">
-            <a href="./shortborad.html" class="footer__link">Shortbord hire</a>
-          </li>
-          <li class="footer__item">
-            <a href="./longboord.html" class="footer__link">Longboard hire</a>
-          </li>
-          <li class="footer__item">
-            <a href="./wetsuits.html" class="footer__link"
-              >Surfboard and Wetsuit hire</a
-            >
-          </li>
-          <li class="footer__item">
-            <a href="./lessons.html" class="footer__link">Surfing lessions</a>
-          </li>
-          <li class="footer__item">
-            <a href="./contact.html" class="footer__link">Contact</a>
-          </li>
-          <li class="footer__item">
-            <a href="./cookies.html" class="footer__link">Cookie Policy</a>
-          </li>
-          <li class="footer__item">
-            <a href="./privacy.html" class="footer__link">Privacy Policy</a>
-          </li>
-          <li class="footer__item">
-            <a href="./trems.html" class="footer__link">Terms and Conditions</a>
-          </li>
-        </ul>
+      <div class="container">
+        <div class="footer__logo"></div>
+        <div aria-label="secondary navigation" class="footer__nav">
+          <ul class="footer__list">
+            <li class="footer__item">
+              <a href="#" class="footer__link">Home</a>
+            </li>
+            <li class="footer__item">
+              <a href="./shortborad.html" class="footer__link"
+                >shortbord hire</a
+              >
+            </li>
+            <li class="footer__item">
+              <a href="./longboord.html" class="footer__link">longboard hire</a>
+            </li>
+            <li class="footer__item">
+              <a href="./wetsuits.html" class="footer__link"
+                >surfboard and wetsuit hire</a
+              >
+            </li>
+            <li class="footer__item">
+              <a href="./lessons.html" class="footer__link">surfing lessions</a>
+            </li>
+            <li class="footer__item">
+              <a href="./contact.html" class="footer__link">Contact</a>
+            </li>
+            <li class="footer__item">
+              <a href="./cookies.html" class="footer__link">Cookie Policy</a>
+            </li>
+            <li class="footer__item">
+              <a href="./privacy.html" class="footer__link">Privacy Policy</a>
+            </li>
+            <li class="footer__item">
+              <a href="./trems.html" class="footer__link"
+                >Terms and Conditions</a
+              >
+            </li>
+          </ul>
+        </div>
+        <div class="phone" aria-label="phone number">
+          <i class="fa-solid fa-phone"></i>
+          <p>0000000000000</p>
+        </div>
+        <address>
+          <p>
+            Bailey’s surf<br />
+            123 amsome breah road <br />
+            Looe <br />
+            Cornwall <br />
+            PLXX 2XX
+          </p>
+        </address>
+        <div class="social">
+          <a href="#" class="social__link">
+            <i class="fab fa-facebook-square social__icon"></i>
+            <span class="hidden">facebook</span>
+          </a>
+          <a href="#" class="social__link messenger">
+            <i class="fab fa-facebook-messenger social__icon"></i>
+            <span class="hidden">facebook messenger</span>
+          </a>
+          <a href="#" class="social__link twitter">
+            <i class="fab fa-twitter twitter social__icon"></i>
+            <span class="hidden">twitter</span>
+          </a>
+          <a href="#" class="social__link twitter">
+            <i class="fab fa-twitter twitter social__icon"></i>
+            <span class="hidden">twitter</span>
+          </a>
+          <a href="#" class="social__link twitter">
+            <i class="fab fa-instagram instagram social__icon"></i>
+            <span class="hidden">instagram</span>
+          </a>
+        </div>
+        <p class="paragraph copyright">&copy; copyright Bailey’s surf 2022</p>
       </div>
-      <div class="phone" aria-label="phone number">
-        <i class="fa-solid fa-phone"></i>
-        <p>0000000000000</p>
-      </div>
-      <address>
-        <p>
-          Bailey’s surf<br />
-          123 amsome breah road <br />
-          Looe <br />
-          Cornwall <br />
-          PLXX 2XX
-        </p>
-      </address>
-      <div class="social">
-        <a href="#" class="social__link">
-          <i class="fab fa-facebook-square social__icon"></i>
-          <span class="hidden">facebook</span>
-        </a>
-        <a href="#" class="social__link messenger">
-          <i class="fab fa-facebook-messenger social__icon"></i>
-          <span class="hidden">facebook messenger</span>
-        </a>
-        <a href="#" class="social__link twitter">
-          <i class="fab fa-twitter twitter social__icon"></i>
-          <span class="hidden">twitter</span>
-        </a>
-        <a href="#" class="social__link twitter">
-          <i class="fab fa-twitter twitter social__icon"></i>
-          <span class="hidden">twitter</span>
-        </a>
-        <a href="#" class="social__link twitter">
-          <i class="fab fa-instagram instagram social__icon"></i>
-          <span class="hidden">instagram</span>
-        </a>
-      </div>
-      <p class="paragraph copyright">&copy; copyright Bailey’s surf 2022</p>
     </footer>
+    <script src="./script.js"></script>
     <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
   </body>
 </html>
