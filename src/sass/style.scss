@@ -36,7 +36,7 @@ label {
   margin-bottom: 1.5rem;
 }
 .container {
-  width: min(100% - 1rem, 70rem);
+  width: min(100% - 1rem, 80rem);
   margin-inline: auto;
 }
 // nav bar
@@ -95,6 +95,7 @@ label {
     text-transform: capitalize;
     font-size: 1.5rem;
     width: min-content;
+    transition: color 0.3s ease-in-out;
     &.active::before {
       content: '';
       width: 100%;
@@ -195,7 +196,7 @@ section:not(.banner) {
   display: grid;
   grid-template-columns: 35px 1fr 35px;
   grid-template-rows: 50% 50%;
-  background: linear-gradient(
+  background-image: linear-gradient(
       0deg,
       rgba(28, 43, 61, 0.5),
       rgba(28, 43, 61, 0.5)
@@ -214,6 +215,7 @@ section:not(.banner) {
     height: 100%;
     width: 100%;
     background-color: rgba(28, 43, 61, 0.2);
+    transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out;
   }
   &__controls__prev {
     grid-column: 1/2;
@@ -243,7 +245,7 @@ section:not(.banner) {
       border-radius: 50%;
       border: 1px solid $accent_green;
       margin-left: 1rem;
-
+      transition: background-color 0.3s ease-in-out;
       &.active {
         background-color: $accent_green;
       }
@@ -260,7 +262,6 @@ section:not(.banner) {
   flex-direction: column;
   align-items: center;
   height: min(220px, 300px);
-  // background-color: #008289;
   padding: 1rem;
   color: $white;
   border-radius: $border-radius;
@@ -277,6 +278,7 @@ section:not(.banner) {
   margin-top: 1rem;
   font-weight: 600;
   text-transform: capitalize;
+  transition: background-color 0.3s ease-in-out;
 }
 .card--heading {
   font-size: 1.5rem;
@@ -339,9 +341,19 @@ section:not(.banner) {
     display: flex;
     align-items: center;
     font-weight: 600;
-    i.active {
+    &.active i {
       transform: rotate(180deg);
     }
+  }
+  &__paragraph {
+    display: none;
+    transform: scale(0, 1);
+    transform-origin: top;
+    transition: transform 0.3s ease-in-out;
+  }
+  &__paragraph.active {
+    display: block;
+    transform: scale(1, 1);
   }
   &--heading {
     text-transform: uppercase;
@@ -384,6 +396,10 @@ section:not(.banner) {
     padding: 10px 0;
     border-radius: 10px;
     border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+    font-weight: 600;
+    font-family: 'Prompt', sans-serif;
   }
 }
 
@@ -529,9 +545,14 @@ section:not(.banner) {
   }
   .home__card {
     margin-top: 0;
+    height: 300px;
   }
   .slider {
     height: 400px;
+    grid-template-columns: 50px 1fr 50px;
+    i {
+      font-size: 1.5rem;
+    }
     &__text {
       max-width: 50ch;
       margin: 0 auto;
@@ -546,6 +567,7 @@ section:not(.banner) {
   }
   .card {
     margin-right: 1rem;
+    height: 300px;
     &:nth-child(3) {
       margin-right: 0;
     }
@@ -633,14 +655,18 @@ section:not(.banner) {
       }
     }
   }
+  .banner {
+    height: 80vh;
+  }
   .about {
     display: flex;
     align-items: center;
     &__imgs {
-      width: 50%;
+      max-width: 50%;
     }
     &__text {
       width: 50%;
+      margin-right: 1rem;
     }
   }
   .slider {
@@ -663,5 +689,95 @@ section:not(.banner) {
   }
   lottie-player {
     width: 50%;
+  }
+  .contact {
+    position: relative;
+  }
+  .contact::before {
+    content: '';
+    width: 510px;
+    height: 430px;
+    background-image: url('../assets/pexels-kindel-media-7425984.jpg');
+    background-size: cover;
+    position: absolute;
+    right: 1.5rem;
+    bottom: 0;
+    border-radius: $border-radius;
+  }
+  .form {
+    width: 50%;
+  }
+  .footer .container {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 50px min-content;
+    padding-bottom: 1rem;
+    place-content: end;
+    gap: 1rem;
+  }
+  .footer__nav {
+    grid-row: 2 / -1;
+    grid-column: 1/3;
+  }
+  .footer__list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  .phone {
+    grid-column: 2/3;
+    grid-row: 2/-1;
+    place-self: start;
+    margin-top: 60%;
+    margin-left: -7px;
+  }
+  address,
+  .social {
+    grid-row: 2/-1;
+    grid-column: 3 / -1;
+  }
+  .social {
+    place-self: start;
+    margin-top: 60%;
+  }
+  .footer .social__icon {
+    font-size: 1.8rem;
+  }
+  .footer address {
+    margin-top: 0;
+  }
+  .copyright {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    text-align: center;
+  }
+}
+@media (min-width: 1440px) {
+  .phone,
+  .social {
+    margin-top: 47%;
+  }
+}
+@media (pointer: fine) {
+  .nav__link:hover {
+    color: $accent_green;
+  }
+  .card__link:hover,
+  .btn:hover {
+    background-color: #008289;
+  }
+  .footer__link:hover,
+  .social__icon:hover {
+    color: #1c2b3d;
+  }
+  .dot:hover {
+    background-color: #00828970;
+  }
+  .slider__controls__prev:hover,
+  .slider__controls__next:hover {
+    background-color: rgba(28, 43, 61, 0.3);
+    color: rgba(13, 187, 196, 0.466);
   }
 }

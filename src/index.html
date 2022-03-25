@@ -17,6 +17,10 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
     <link rel="stylesheet" href="css/style.css" />
     <title>Bailey's Surf</title>
   </head>
@@ -108,7 +112,7 @@
       </section>
 
       <section class="testimonials container">
-        <div class="slider">
+        <div class="slider" data-slide="1">
           <div class="slider__controls__prev">
             <i class="fa-solid fa-chevron-left"></i>
           </div>
@@ -156,16 +160,16 @@
           <ul class="faq__list">
             <li>
               <button
-                class="faq__btn"
+                class="faq__btn active"
                 aria-expanded="false"
                 aria-controls="question-one
               "
               >
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit.<i
-                  class="fa-solid fa-chevron-up active"
+                  class="fa-solid fa-chevron-up"
                 ></i>
               </button>
-              <p class="paragraph faq__paragraph" id="question-one">
+              <p class="paragraph faq__paragraph active" id="question-one">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Egestas
                 tellus dictumst eget rutrum maecenas habitant senectus.
                 Facilisis vestibulum.
@@ -317,10 +321,6 @@
           <a href="#" class="social__link messenger">
             <i class="fab fa-facebook-messenger social__icon"></i>
             <span class="hidden">facebook messenger</span>
-          </a>
-          <a href="#" class="social__link twitter">
-            <i class="fab fa-twitter twitter social__icon"></i>
-            <span class="hidden">twitter</span>
           </a>
           <a href="#" class="social__link twitter">
             <i class="fab fa-twitter twitter social__icon"></i>
