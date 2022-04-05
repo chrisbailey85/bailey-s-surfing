@@ -25,7 +25,6 @@ const sliderImgs = {
     name: 'Dianne Russell',
   },
 }
-AOS.init()
 const nextSlide = () => {
   let index = +slider.dataset.slide
   if (index === 4) {
