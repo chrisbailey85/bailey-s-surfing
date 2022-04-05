@@ -25,7 +25,7 @@ const sliderImgs = {
     name: 'Dianne Russell',
   },
 }
-
+AOS.init()
 const nextSlide = () => {
   let index = +slider.dataset.slide
   if (index === 4) {
@@ -73,9 +73,15 @@ hamburger.addEventListener('click', () => {
 
 faqBtn.forEach((btn, idx) => {
   btn.addEventListener('click', (e) => {
+    faqBtn.forEach((btn) => {
+      btn.classList.remove('active')
+    })
+    faqParagraph.forEach((faqPara) => {
+      faqPara.classList.remove('active')
+    })
     e.target.classList.contains('active')
-      ? (e.target.ariaExpanded = true)
-      : (e.target.ariaExpanded = false)
+      ? (e.target.ariaExpanded = false)
+      : (e.target.ariaExpanded = true)
     e.target.classList.toggle('active')
     faqParagraph[idx].classList.toggle('active')
   })
